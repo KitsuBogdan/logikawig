@@ -1,0 +1,29 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffdd57;
+    padding: 1pc 0;
+    flex-direction: row;
+}
+
+.logo {
+    font-family: "Itim", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3pc;
+    margin-left: 20px;
+    color: #00885f8c;
+}
+.login {
+    font-family: "Itim", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3pc;
+    margin-left: 20px;
+    color: #00885f8c;
+}
