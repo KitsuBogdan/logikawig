@@ -19,11 +19,17 @@ header {
     margin-left: 20px;
     color: #00885f8c;
 }
+
 .login {
     font-family: "Itim", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 3pc;
-    margin-left: 20px;
-    color: #00885f8c;
+    font-size: 2pc;
+    margin-right: 20px;
+    background-color: #00885f8c;
+    width: 7pc;
+    height: 3pc;
+    text-align: center;
+    border-radius: 100px;
+    color: white;
 }
