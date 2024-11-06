@@ -6,9 +6,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #ffdd57;
-    padding: 1pc 0;
+    background-color: #FFB928FF;
     flex-direction: row;
+    box-shadow: wheat 0px 1px 10px;
 }
 
 .logo {
@@ -32,4 +32,8 @@ header {
     text-align: center;
     border-radius: 100px;
     color: white;
+}
+
+body {
+    background-color: #FFB928FF;
 }
