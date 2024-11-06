@@ -1,14 +1,16 @@
 header {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #FFB928FF;
     flex-direction: row;
-    box-shadow: wheat 0px 1px 10px;
+    
+    left: 0px;
+    top: 0px;
+
+    background: #FFC244;
+
 }
 
 .logo {
@@ -33,7 +35,19 @@ header {
     border-radius: 100px;
     color: white;
 }
-
-body {
-    background-color: #FFB928FF;
+main{
+    background: white;
+    height: 100pc;
+    position: fixed;
+    width: 100%;
+    top: 60px;
+    left: 0;
+}
+.hh {
+    background: #FFC244;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    top: 60px;
+    left: 0;
 }
