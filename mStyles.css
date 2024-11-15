@@ -172,8 +172,9 @@ main {
 }
 
 .cart-section {
+    margin-top: 50px;
     width: 90%;
-    max-width: 800px;
+    max-width: 600px;
     background-color: white;
     padding: 30px;
     border-radius: 10px;
