@@ -1,14 +1,65 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <p>First</p>
-    <p>Roman</p>
-</body>
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Карта ресторанов Киева</title> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" /> 
+ 
+</head> 
+ 
+    <body> 
+        <h1>Карта ресторанов Киева</h1> 
+        <style> 
+            #map { 
+                height: 500px; 
+                width: 100%; 
+            } 
+            </style> 
+ 
+    <!-- Контейнер --> 
+    <div id="map"></div> 
+    <input type="button" id="map" value="Нажмите, чтобы спрятать карту" /> 
+ 
+  <div id="map"></div> 
+ 
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> 
+    <script> 
+        var map = L.map('map').setView([50.4501, 30.6401], 12); // Координати киева 
+ 
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { 
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' 
+        }).addTo(map); 
+ 
+        var restaurants = [ 
+            { 
+                name: 'Ресторан "Велюр"', 
+                lat: 50.4533, 
+                lon: 30.5190, 
+                description: 'Классический украинский ресторан.' 
+            }, 
+            { 
+                name: 'Ресторан "Кухня"', 
+                lat: 50.4455, 
+                lon: 30.5205, 
+                description: 'Современная европейская кухня.' 
+            }, 
+            { 
+                name: 'Ресторан "Барвинок"', 
+                lat: 50.4477, 
+                lon: 30.5179, 
+                description: 'Ресторан с традиционной украинской кухней.' 
+            } 
+        ]; 
+         
+        restaurants.forEach(function(restaurant) { 
+            var marker = L.marker([restaurant.lat, restaurant.lon]).addTo(map); 
+            marker.bindPopup("<b>" + restaurant.name + "</b><br>" + restaurant.description); 
+        }); 
+        document.getElementById('hider').onclick = function() { 
+      document.getElementById('text').hidden = true; 
+    } 
+    </script> 
+</body> 
 </html>
