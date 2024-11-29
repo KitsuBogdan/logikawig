@@ -1,20 +1,26 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mStyles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
     <title>Замовити послугу</title>
 </head>
+
 <body>
     <header>
         <div class="logo">
             <a href="index.html">
                 <img src="glovo.png" alt="Glovo Logo">
             </a>
+        </div>
+        <div>
+            <button onclick="cart()">Корзина</button>
         </div>
         <div class="login">
             <img src="https://glovoapp.com/images/svg/login.svg" alt="Login Icon">
@@ -26,28 +32,40 @@
             <h1 class="section-title">Замовити послугу</h1>
             <form class="order-form">
                 <label for="category">Оберіть категорію:</label>
-                <select id="category" name="category" required>
-                    <option value="" disabled selected>Оберіть категорію</option>
-                    <option value="food">Їжа</option>
-                    <option value="groceries">Продукти</option>
-                    <option value="pharmacy">Аптеки</option>
-                    <option value="stores">Магазини</option>
-                </select>
+                <section class="order-section">
+                    <div class="buttons">
+                        <button onclick="filterProducts('all')">Усі</button>
+                        <button onclick="filterProducts('food')">Їжа</button>
+                        <button onclick="filterProducts('groceries')">Продукти</button>
+                        <button onclick="filterProducts('pharmacy')">Аптеки</button>
+                        <button onclick="filterProducts('stores')">Магазини</button>
+                    </div>
+                </section>
 
-                <label for="address">Адреса доставки:</label>
-                <input type="text" id="address" name="address" placeholder="Введіть адресу" required>
 
 
-                <button type="submit" class="submit-button">Підтвердити замовлення</button>
+
+                <section class="tovars-section">
+                    <div class="tovars"></div>
+                </section>
+
+                <!-- <button type="submit" class="submit-button">Підтвердити замовлення</button> -->
             </form>
         </section>
         <section class="cart-section">
             <h1 class="section-title">Ваша корзина</h1>
             <div class="cart-items">
-                
+
             </div>
             <div class="cart-summary">
+                <button onclick="getPrice()">Refresh</button>
                 <p>Загальна сума: <span id="total-price">0 грн</span></p>
+
+                <label for="address">Адреса доставки:</label>
+                <button class="show_map" onclick="show_map()">Показати</button><br><br><br><br>
+                <div id="map_frame" >
+                    <iframe src="karta.html" frameborder="0"></iframe>
+                </div>
                 <button class="checkout-button">Оформити замовлення</button>
             </div>
         </section>
@@ -55,5 +73,8 @@
     <footer>
         <p>&copy; 2024 Glovo Clone. Всі права захищені.</p>
     </footer>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> 
+    <script src="products.js"></script>
 </body>
+
 </html>

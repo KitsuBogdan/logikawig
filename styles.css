@@ -116,3 +116,19 @@ main {
         padding: 10px 20px;
     }
 }
+
+.tovars {
+    display: flex;
+    border: 1px solid black;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.order {
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+
+}
