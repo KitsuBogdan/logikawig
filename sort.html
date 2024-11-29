@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mStyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <title>Замовити послугу</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="glovo.png" alt="Glovo Logo">
+            </a>
+        </div>
+        <div class="login">
+            <img src="https://glovoapp.com/images/svg/login.svg" alt="Login Icon">
+            Увійти
+        </div>
+    </header>
+    <main>
+        <section class="order-section">
+            <h1 class="section-title">Замовити послугу</h1>
+            <div class="buttons">
+                <button onclick="filterProducts('all')">Усі</button>
+                <button onclick="filterProducts('food')">Їжа</button>
+                <button onclick="filterProducts('groceries')">Продукти</button>
+                <button onclick="filterProducts('pharmacy')">Аптеки</button>
+                <button onclick="filterProducts('stores')">Магазини</button>
+            </div>
+        </section>
+        <section class="tovars-section">
+            <h1 class="section-title">Товари</h1>
+            <div class="tovars"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Glovo Clone. Всі права захищені.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
